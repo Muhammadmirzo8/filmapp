@@ -1,0 +1,6 @@
+.venv
+lib/
+*.log
+*.pot
+*.pyc
+pycache
