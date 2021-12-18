@@ -2,6 +2,7 @@ from django.contrib.auth.models import User
 from django.db import models
 
 class Actor(models.Model):
+    """jinsi is sex"""
     jinsi = [
         ("Male", "Male"),
         ("Female", "Female"),

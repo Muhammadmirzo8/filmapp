@@ -24,7 +24,7 @@ class CommentListSerializer(serializers.ModelSerializer):
         fields = "__all__"  
 
         def validate_text(self, text): 
-            a = "yaramas"
+            a = "Fuck"
             if a in text:
-                raise ValidationError(detail="Befarosat bo'lmang")
+                raise ValidationError(detail="Do not use this word")
             return text

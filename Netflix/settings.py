@@ -1,5 +1,6 @@
 
-from pathlib import Path
+from pathlib import Path 
+import os
 
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIR = Path(__file__).resolve().parent.parent
@@ -9,12 +10,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = 'django-insecure-rpag%))4g7g!w1@*@f_2xm!e_pmg*xfi@uw^_yip-3-aly8&gg'
+SECRET_KEY =os.environ["SECRET_KEY"]
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ["*"]
 
 
 # Application definition
@@ -69,8 +70,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'Netflix2', 
-        'USER': 'postgres',
-        'PASSWORD': '2005',
+        'USER': os.environ["U"],
+        'PASSWORD': os.environ["PAROL"],
         'HOST': 'localhost',
         'PORT': '5432'
     }
