@@ -3,4 +3,5 @@ lib/
 *.log
 *.pot
 *.pyc
-pycache
+pycache 
+.env
