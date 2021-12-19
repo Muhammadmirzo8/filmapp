@@ -129,7 +129,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 import django_heroku
 try:
-    from .production_settings import *
+    from .settings import *
     MIDDLEWARE.append('whitenoise.middleware.WhiteNoiseMiddleware',)
 except ImportError:
     pass
