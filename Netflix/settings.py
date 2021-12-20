@@ -39,7 +39,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',  
-    'whitenoise.middleware.WhiteNoiseMiddleware',
+ 
    
 ]
 
@@ -129,7 +129,10 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 import django_heroku
-
-
+try:
+    from .settings import *
+    MIDDLEWARE.append('whitenoise.middleware.WhiteNoiseMiddleware',)
+except ImportError:
+    pass
 
 django_heroku.settings(locals())
