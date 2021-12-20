@@ -9,7 +9,8 @@ BASE_DIR = Path('file').resolve().parent.parent
 # See https://docs.djangoproject.com/en/3.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY ="django-insecure-@-jv8&219w5(&)q#ry5+&**y#bar@kz4sf0&$a$ner2y0xcs!-"
+SECRET_KEY = "django-insecure-rpag%))4g7g!w1@*@f_2xm!e_pmg*xfi@uw^_yip-3-aly8&gg" 
+
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
@@ -70,8 +71,8 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'Netflix2', 
-        'USER': os.environ["U"],
-        'PASSWORD': os.environ["PAROL"],
+        'USER': 'postgres',
+        'PASSWORD': '2005' ,
         'HOST': 'localhost',
         'PORT': '5432'
     }
