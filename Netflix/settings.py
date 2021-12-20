@@ -114,8 +114,7 @@ USE_TZ = True
 
 # # Static files (CSS, JavaScript, Images)
 # # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+
 
 # Extra places for collectstatic to find static files.
 
@@ -123,12 +122,7 @@ STATIC_URL = '/static/'
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
-
-import django_heroku
-try:
-    from .production_settings import *
-    MIDDLEWARE.append('whitenoise.middleware.WhiteNoiseMiddleware',)
-except ImportError:
-    pass
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_URL = "/static/"
 
 django_heroku.settings(locals())
